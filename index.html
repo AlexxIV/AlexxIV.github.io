@@ -1,96 +1,480 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="bg">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width , initial-scale=1">
-
-    <title>SoftUni Blog</title>
-    <link rel="stylesheet" href="styles/style.css">
-    <script src="scripts/jquery-1.10.2.js"></script>
-    <script src="scripts/bootstrap.js"></script>
-
-
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ергенско парти 2026 — Брошура (3 дестинации × 2 бюджета)</title>
+  <style>
+    :root{
+      --ink:#0b1220; --muted:#475467; --line:#E4E7EC; --bg:#F8FAFC; --card:#fff;
+      --accent:#2563eb; --accent2:#7c3aed;
+      --shadow:0 12px 32px rgba(16,24,40,.08);
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+    a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
+    .wrap{max-width:1200px;margin:0 auto;padding:26px 16px 70px}
+    .hero{
+      background:linear-gradient(135deg,rgba(37,99,235,.12),rgba(124,58,237,.10));
+      border:1px solid rgba(37,99,235,.18);
+      border-radius:20px;padding:20px 18px;box-shadow:var(--shadow)
+    }
+    h1{margin:0 0 6px;font-size:26px;letter-spacing:-.2px}
+    .sub{color:var(--muted);line-height:1.55;font-size:14px}
+    .pillrow{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+    .pill{display:inline-flex;gap:8px;align-items:center;padding:8px 10px;border:1px solid rgba(16,24,40,.10);
+      background:rgba(255,255,255,.80);border-radius:999px;font-size:13px;color:var(--ink)}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px;margin-top:16px}
+    .card{grid-column:span 12;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px;box-shadow:var(--shadow)}
+    .section{margin-top:18px}
+    .section h2{margin:0 0 10px;font-size:18px;letter-spacing:-.1px}
+    .muted{color:var(--muted)}
+    .hr{height:1px;background:var(--line);margin:14px 0}
+    table{width:100%;border-collapse:collapse;font-size:14px}
+    th,td{border-bottom:1px solid var(--line);padding:10px 8px;vertical-align:top}
+    th{color:var(--muted);font-weight:600;text-align:left}
+    td.num{text-align:right;white-space:nowrap}
+    tr.total td{font-weight:900;border-top:2px solid var(--line)}
+    .kpi{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:12px}
+    @media (max-width:900px){.kpi{grid-template-columns:1fr}}
+    .k{border:1px solid var(--line);border-radius:16px;padding:12px;background:#fff}
+    .k .t{font-size:12px;color:var(--muted)}
+    .k .v{margin-top:6px;font-size:15px;font-weight:800}
+    .cols{display:grid;grid-template-columns:repeat(12,1fr);gap:14px;margin-top:12px}
+    @media (max-width:1000px){.cols{grid-template-columns:1fr}}
+    .col8{grid-column:span 8}.col4{grid-column:span 4}
+    .optgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+    @media (max-width:900px){.optgrid{grid-template-columns:1fr}}
+    .opt{border:1px solid var(--line);border-radius:18px;padding:14px;background:#fff}
+    .opt h3{margin:0;font-size:16px}
+    .price{margin-top:6px;display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+    .price .big{font-size:20px;font-weight:950}
+    .price .small{font-size:13px;color:var(--muted)}
+    .list{margin:10px 0 0 18px}
+    .list li{margin:6px 0}
+    .callout{border:1px dashed rgba(37,99,235,.35);background:rgba(37,99,235,.05);border-radius:16px;padding:12px 14px;margin-top:12px}
+    .callout b{color:#1d4ed8}
+    .links a{display:inline-block;margin-right:10px;margin-top:6px}
+    .foot{margin-top:14px;color:var(--muted);font-size:12.5px;line-height:1.55}
+    @media print{body{background:#fff}.hero,.card{box-shadow:none}a{color:#000;text-decoration:none}.wrap{padding:0}}
+  </style>
 </head>
 <body>
-    <header>
-        <div class="navbar navbar-default navbar-fixed-top text-uppercase">
-          <div class="container">
-            <div class="navbar-header">
-                <a href="index.html" class="navbar-brand">SoftUni Blog</a>
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-              <div class="navbar-collapse collapse">
-                  <ul class="nav navbar-nav navbar-right">
-                      <li><a href="register.html">Register</a></li>
-                      <li><a href="login.html">Login</a></li>
-                  </ul>
+  <div class="wrap">
+    <div class="hero">
+      <h1>Ергенско парти 2026 — 3 дестинации × 2 бюджета (Бюджет / Премиум)</h1>
+      <div class="sub">
+        <div><b>Група:</b> 10 човека • <b>Продължителност:</b> 3 нощувки (Пет–Пон)</div>
+        <div><b>Транспорт:</b> <b>лични автомобили</b> и общ “транспортен фонд” (гориво + паркинги + пътни/такси).</div>
+        <div><b>Корфу:</b> полет <b>Ryanair</b> от София • <b>без премиум полети</b> • повечето с <b>безплатен малък ръчен багаж</b>.</div>
+        <div class="muted">Валута: EUR за сравнение. Ориентировъчно: 1€ ≈ 1.956 лв.</div>
+      </div>
+      <div class="pillrow">
+        <span class="pill">🚗 Всички опции: лични коли</span>
+        <span class="pill">✈️ Корфу: фиксиран стил пътуване (Ryanair, ръчен багаж)</span>
+        <span class="pill">🍻 Реалистичен фонд за напитки</span>
+        <span class="pill">🧾 Резерв 10% включен</span>
+      </div>
+    </div>
+
+    <!-- PARAMETERS -->
+    <div class="section grid" id="params">
+      <div class="card">
+        <h2>Параметри (можеш да ги редактираш за 30 секунди)</h2>
+        <div class="muted">Тази секция е “настройка” — ако смените тези числа, ще знаете какво да коригирате в транспорт/полет.</div>
+
+        <div class="cols">
+          <div class="col8">
+            <table>
+              <thead><tr><th>Параметър</th><th>Стойност (в брошурата)</th><th>Бележка</th></tr></thead>
+              <tbody>
+                <tr><td><b>Хора</b></td><td>10</td><td>Всички бюджети са сметнати за 10.</td></tr>
+                <tr><td><b>Автомобили</b></td><td>3 коли (пример)</td><td>Ако сте 2 или 4 коли — умножете/разделете транспортния фонд.</td></tr>
+                <tr><td><b>Корфу: билет (двупосочен)</b></td><td>180 € / човек (пример)</td><td>Сменете числото, ако имате вашата реална цена.</td></tr>
+                <tr><td><b>SOF паркинг (пример)</b></td><td>4 дни ≈ 45 € / кола (официална тарифа за T1 open-air)</td><td>Може да изберете друг паркинг/цена.</td></tr>
+                <tr><td><b>Багаж</b></td><td>Безплатен малък ръчен (за повечето)</td><td>Само ако някой добавя 10 кг/чекиран — доплаща отделно.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col4">
+            <div class="opt">
+              <h3>Линкове (полезни)</h3>
+              <div class="links">
+                <a target="_blank" rel="noopener" href="https://www.ryanair.com/">Ryanair</a>
+                <a target="_blank" rel="noopener" href="https://help.ryanair.com/hc/en-gb/articles/12888036565521-Ryanair-s-Bag-Policy">Ryanair: Bag policy</a>
+                <a target="_blank" rel="noopener" href="https://sofia-airport.eu/en/at-the-airport/parking/">SOF: Parking (официално)</a>
+                <a target="_blank" rel="noopener" href="https://www.skyscanner.net/transport/flights/sofi/cfu/">SOF → CFU (търсене)</a>
               </div>
+              <div class="callout">
+                <b>Важно:</b> Ryanair е стриктен за размерите на ръчния багаж — ако не се събира в сензора на гейта, таксите са неприятни.
+              </div>
+            </div>
           </div>
         </div>
-    </header>
-    <main>
-        <div class="container body-content">
-            <div class="row">
-                <div class="col-md-6">
-                    <article>
-                        <header>
-                            <h2>Why Choosing the Right Storage Infrastructure.</h2>
-                        </header>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur at blanditiis consequuntur dolorum ducimus ea, eos illo incidunt magni modi nobis nostrum, omnis perferendis qui, quo rem sunt tempora velit.
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur at blanditiis consequuntur dolorum ducimus ea, eos illo incidunt magni modi nobis nostrum, omnis perferendis qui, quo rem sunt tempora velit.
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur at blanditiis consequuntur dolorum ducimus ea, eos illo incidunt magni modi nobis nostrum, omnis perferendis qui, quo rem sunt tempora velit.
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur at blanditiis consequuntur dolorum ducimus ea, eos illo incidunt magni modi nobis nostrum, omnis perferendis qui, quo rem sunt tempora velit.
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur at blanditiis consequuntur dolorum ducimus ea, eos illo incidunt magni modi nobis nostrum, omnis perferendis qui, quo rem sunt tempora velit.
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur at blanditiis consequuntur dolorum ducimus ea, eos illo incidunt magni modi nobis nostrum, omnis perferendis qui, quo rem sunt tempora velit.
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur at blanditiis consequuntur dolorum ducimus ea, eos illo incidunt magni modi nobis nostrum, omnis perferendis qui, quo rem sunt tempora velit.
-                        </p>
-                        <small class="author">
-                            <p>Steve Fowler</p>
-                        </small>
-                        <footer>
-                            <div class="pull-right">
-                                <a href="viewpost.html" class="btn btn-default btn-xs">Read more &raquo;</a>
-                            </div>
-                        </footer>
-                    </article>
-                </div>
-                <div class="col-md-6">
-                    <article>
-                        <header>
-                            <h2>Why Choosing the Right Storage Infrastructure.</h2>
-                        </header>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur at blanditiis consequuntur dolorum ducimus ea, eos illo incidunt magni modi nobis nostrum, omnis perferendis qui, quo rem sunt tempora velit.
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur at blanditiis consequuntur dolorum ducimus ea, eos illo incidunt magni modi nobis nostrum, omnis perferendis qui, quo rem sunt tempora velit.
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur at blanditiis consequuntur dolorum ducimus ea, eos illo incidunt magni modi nobis nostrum, omnis perferendis qui, quo rem sunt tempora velit.
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur at blanditiis consequuntur dolorum ducimus ea, eos illo incidunt magni modi nobis nostrum, omnis perferendis qui, quo rem sunt tempora velit.
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur at blanditiis consequuntur dolorum ducimus ea, eos illo incidunt magni modi nobis nostrum, omnis perferendis qui, quo rem sunt tempora velit.
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur at blanditiis consequuntur dolorum ducimus ea, eos illo incidunt magni modi nobis nostrum, omnis perferendis qui, quo rem sunt tempora velit.
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur at blanditiis consequuntur dolorum ducimus ea, eos illo incidunt magni modi nobis nostrum, omnis perferendis qui, quo rem sunt tempora velit.
-                        </p>
-                        <small class="author">
-                            <p>Steve Fowler</p>
-                        </small>
-                        <footer>
-                            <div class="pull-right">
-                                <a href="viewpost.html" class="btn btn-default btn-xs">Read more &raquo;</a>
-                            </div>
-                        </footer>
-                    </article>
-                </div>
 
+        <div class="foot">
+          Пояснение: “Бюджет” = разумен купон без излишества. “Премиум” = по-добро настаняване + повече заведения/клубове + VIP/лодка/екстра активности.
+        </div>
+      </div>
+    </div>
+
+    <!-- QUICK COMPARE -->
+    <div class="section grid">
+      <div class="card">
+        <h2>Сравнение (за избор за 2 минути)</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Дестинация</th>
+              <th>Вайб</th>
+              <th class="num">Бюджет — Общо</th>
+              <th class="num">Бюджет — На човек</th>
+              <th class="num">Премиум — Общо</th>
+              <th class="num">Премиум — На човек</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><b>🌊 Созопол</b></td>
+              <td>Вила + BBQ + барове</td>
+              <td class="num"><b>4 021 €</b><div class="muted">≈ 7 865 лв</div></td>
+              <td class="num"><b>402 €</b><div class="muted">≈ 787 лв</div></td>
+              <td class="num"><b>8 268 €</b><div class="muted">≈ 16 170 лв</div></td>
+              <td class="num"><b>827 €</b><div class="muted">≈ 1 617 лв</div></td>
+            </tr>
+            <tr>
+              <td><b>🏛️ Солун</b></td>
+              <td>Град + таверни + клубове</td>
+              <td class="num"><b>5 905 €</b><div class="muted">≈ 11 550 лв</div></td>
+              <td class="num"><b>591 €</b><div class="muted">≈ 1 155 лв</div></td>
+              <td class="num"><b>11 473 €</b><div class="muted">≈ 22 440 лв</div></td>
+              <td class="num"><b>1 147 €</b><div class="muted">≈ 2 244 лв</div></td>
+            </tr>
+            <tr>
+              <td><b>🏖️ Корфу (Kavos)</b></td>
+              <td>Остров + strip + boat party</td>
+              <td class="num"><b>10 191 €</b><div class="muted">≈ 19 932 лв</div></td>
+              <td class="num"><b>1 019 €</b><div class="muted">≈ 1 993 лв</div></td>
+              <td class="num"><b>16 603 €</b><div class="muted">≈ 32 472 лв</div></td>
+              <td class="num"><b>1 660 €</b><div class="muted">≈ 3 247 лв</div></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="kpi">
+          <div class="k"><div class="t">Най-добро “value”</div><div class="v">Созопол</div></div>
+          <div class="k"><div class="t">Най-добър градски nightlife</div><div class="v">Солун</div></div>
+          <div class="k"><div class="t">Най-много “ваканция/остров”</div><div class="v">Корфу (Kavos)</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SOZOPOL -->
+    <div class="section grid" id="sozopol">
+      <div class="card">
+        <h2>🌊 Созопол</h2>
+        <div class="muted">Най-лесна организация. Подходящо ако искате “вила + BBQ + 1–2 силни вечери”.</div>
+
+        <div class="cols">
+          <div class="col8">
+            <div class="optgrid">
+              <div class="opt">
+                <h3>Бюджет</h3>
+                <div class="price">
+                  <div class="big">402 € / човек</div>
+                  <div class="small">Общо: 4 021 € • ≈ 7 865 лв (вкл. резерв 10%)</div>
+                </div>
+                <ul class="list">
+                  <li>Вила/къща 3 нощи</li>
+                  <li>BBQ + 2 вечери навън</li>
+                  <li>Напитки: реалистичен общ фонд за 3 дни</li>
+                  <li>Активности: лодка/разходка + барове</li>
+                </ul>
+                <div class="hr"></div>
+                <table>
+                  <thead><tr><th>Разход</th><th class="num">BGN</th><th class="num">EUR</th></tr></thead>
+                  <tbody>
+                    <tr><td>Транспортен фонд (3 коли): гориво + паркинги</td><td class="num">550</td><td class="num">281</td></tr>
+                    <tr><td>Настаняване (3 нощи)</td><td class="num">2 100</td><td class="num">1 074</td></tr>
+                    <tr><td>Храна (закуски + BBQ + 2 вечери)</td><td class="num">1 400</td><td class="num">716</td></tr>
+                    <tr><td>Напитки (3 дни — общ фонд)</td><td class="num">2 200</td><td class="num">1 125</td></tr>
+                    <tr><td>Активности (лодка/барове/игри)</td><td class="num">900</td><td class="num">460</td></tr>
+                    <tr><td>Резерв 10%</td><td class="num">715</td><td class="num">365</td></tr>
+                    <tr class="total"><td>ОБЩО</td><td class="num">7 865</td><td class="num">4 021</td></tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="opt">
+                <h3>Премиум</h3>
+                <div class="price">
+                  <div class="big">827 € / човек</div>
+                  <div class="small">Общо: 8 268 € • ≈ 16 170 лв (вкл. резерв 10%)</div>
+                </div>
+                <ul class="list">
+                  <li>По-добра вила/локация/удобства</li>
+                  <li>Повече ресторанти + “силна” вечер</li>
+                  <li>Напитки: premium алкохол + повече излизания</li>
+                  <li>Активности: частна лодка/яхта + VIP</li>
+                </ul>
+                <div class="hr"></div>
+                <table>
+                  <thead><tr><th>Разход</th><th class="num">BGN</th><th class="num">EUR</th></tr></thead>
+                  <tbody>
+                    <tr><td>Транспортен фонд (3 коли): гориво + паркинги</td><td class="num">800</td><td class="num">409</td></tr>
+                    <tr><td>Настаняване (3 нощи)</td><td class="num">4 500</td><td class="num">2 301</td></tr>
+                    <tr><td>Храна (повече ресторанти)</td><td class="num">3 000</td><td class="num">1 534</td></tr>
+                    <tr><td>Напитки (3 дни — premium фонд)</td><td class="num">3 200</td><td class="num">1 636</td></tr>
+                    <tr><td>Активности (частна лодка/яхта + VIP)</td><td class="num">3 200</td><td class="num">1 636</td></tr>
+                    <tr><td>Резерв 10%</td><td class="num">1 470</td><td class="num">751</td></tr>
+                    <tr class="total"><td>ОБЩО</td><td class="num">16 170</td><td class="num">8 268</td></tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
+          </div>
+
+          <div class="col4">
+            <div class="opt">
+              <h3>Линкове</h3>
+              <div class="links">
+                <a target="_blank" rel="noopener" href="https://www.booking.com/searchresults.html?ss=Sozopol&group_adults=10">Booking (10 души)</a>
+                <a target="_blank" rel="noopener" href="https://www.airbnb.com/s/Sozopol--Bulgaria/homes?adults=10">Airbnb (10 души)</a>
+                <a target="_blank" rel="noopener" href="https://www.getyourguide.com/s/?q=Sozopol%20boat%20trip">Boat trips</a>
+                <a target="_blank" rel="noopener" href="https://www.getyourguide.com/s/?q=Sozopol%20bar%20crawl">Bar crawl</a>
+              </div>
+              <div class="callout">
+                <b>Кога “премиум” има смисъл?</b><br/>
+                Ако искате частна лодка + VIP вечер + по-добра вила.
+              </div>
+            </div>
+          </div>
         </div>
-    </main>
-    <footer>
-        <div class="container modal-footer">
-            <p>&copy; 2016 - Software University Foundation</p>
+      </div>
+    </div>
+
+    <!-- THESSALONIKI -->
+    <div class="section grid" id="thessaloniki">
+      <div class="card">
+        <h2>🏛️ Солун</h2>
+        <div class="muted">Градско ергенско: по-лесно е да сте “всяка вечер навън” и да имате план Б при време.</div>
+
+        <div class="cols">
+          <div class="col8">
+            <div class="optgrid">
+              <div class="opt">
+                <h3>Бюджет</h3>
+                <div class="price">
+                  <div class="big">591 € / човек</div>
+                  <div class="small">Общо: 5 905 € • ≈ 11 550 лв (вкл. резерв 10%)</div>
+                </div>
+                <ul class="list">
+                  <li>3★ хотел / апартаменти (3 нощи)</li>
+                  <li>2 силни вечери + по-леки обяди</li>
+                  <li>Напитки: барове/клубове (без VIP бутилки)</li>
+                </ul>
+                <div class="hr"></div>
+                <table>
+                  <thead><tr><th>Разход</th><th class="num">BGN</th><th class="num">EUR</th></tr></thead>
+                  <tbody>
+                    <tr><td>Транспортен фонд (3 коли): гориво + пътни + паркинги</td><td class="num">1 400</td><td class="num">716</td></tr>
+                    <tr><td>Настаняване (3 нощи)</td><td class="num">2 600</td><td class="num">1 329</td></tr>
+                    <tr><td>Храна</td><td class="num">2 000</td><td class="num">1 023</td></tr>
+                    <tr><td>Напитки (3 дни — общ фонд)</td><td class="num">3 000</td><td class="num">1 534</td></tr>
+                    <tr><td>Активности/входове</td><td class="num">900</td><td class="num">460</td></tr>
+                    <tr><td>Таксита/локален транспорт</td><td class="num">600</td><td class="num">307</td></tr>
+                    <tr><td>Резерв 10%</td><td class="num">1 050</td><td class="num">537</td></tr>
+                    <tr class="total"><td>ОБЩО</td><td class="num">11 550</td><td class="num">5 905</td></tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="opt">
+                <h3>Премиум</h3>
+                <div class="price">
+                  <div class="big">1 147 € / човек</div>
+                  <div class="small">Общо: 11 473 € • ≈ 22 440 лв (вкл. резерв 10%)</div>
+                </div>
+                <ul class="list">
+                  <li>4★ централен хотел</li>
+                  <li>Повече ресторанти + морска храна</li>
+                  <li>Напитки: 2 силни вечери (VIP/бутилки)</li>
+                  <li>VIP входове/маса + повече таксита</li>
+                </ul>
+                <div class="hr"></div>
+                <table>
+                  <thead><tr><th>Разход</th><th class="num">BGN</th><th class="num">EUR</th></tr></thead>
+                  <tbody>
+                    <tr><td>Транспортен фонд (3 коли): гориво + пътни + паркинги</td><td class="num">1 800</td><td class="num">920</td></tr>
+                    <tr><td>Настаняване (3 нощи)</td><td class="num">6 500</td><td class="num">3 323</td></tr>
+                    <tr><td>Храна</td><td class="num">3 500</td><td class="num">1 789</td></tr>
+                    <tr><td>Напитки (VIP/бутилки)</td><td class="num">5 200</td><td class="num">2 658</td></tr>
+                    <tr><td>VIP/Активности</td><td class="num">2 500</td><td class="num">1 278</td></tr>
+                    <tr><td>Таксита/локален транспорт</td><td class="num">900</td><td class="num">460</td></tr>
+                    <tr><td>Резерв 10%</td><td class="num">2 040</td><td class="num">1 043</td></tr>
+                    <tr class="total"><td>ОБЩО</td><td class="num">22 440</td><td class="num">11 473</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div class="col4">
+            <div class="opt">
+              <h3>Линкове</h3>
+              <div class="links">
+                <a target="_blank" rel="noopener" href="https://www.booking.com/searchresults.html?ss=Thessaloniki&group_adults=10">Booking (10 души)</a>
+                <a target="_blank" rel="noopener" href="https://www.airbnb.com/s/Thessaloniki--Greece/homes?adults=10">Airbnb (10 души)</a>
+                <a target="_blank" rel="noopener" href="https://www.getyourguide.com/s/?q=Thessaloniki%20food%20tour">Food tours</a>
+                <a target="_blank" rel="noopener" href="https://www.getyourguide.com/s/?q=Thessaloniki%20nightlife">Nightlife</a>
+              </div>
+              <div class="callout">
+                <b>Кога “премиум” има смисъл?</b><br/>
+                Ако планирате VIP/бутилки и искате 4★ център.
+              </div>
+            </div>
+          </div>
         </div>
-    </footer>
+      </div>
+    </div>
+
+    <!-- CORFU / KAVOS -->
+    <div class="section grid" id="corfu">
+      <div class="card">
+        <h2>🏖️ Корфу — Kavos</h2>
+        <div class="muted">Остров + парти зона (strip) + boat party. Най-скъпо, но най-“vacation” усещане.</div>
+
+        <div class="cols">
+          <div class="col8">
+            <div class="optgrid">
+              <div class="opt">
+                <h3>Бюджет</h3>
+                <div class="price">
+                  <div class="big">1 019 € / човек</div>
+                  <div class="small">Общо: 10 191 € • ≈ 19 932 лв (вкл. резерв 10%)</div>
+                </div>
+                <ul class="list">
+                  <li>Лични коли до София + паркинг на летището</li>
+                  <li>Ryanair: стандартен билет, повечето само с малък ръчен багаж</li>
+                  <li>Настаняване 2–3★ / студиа близо до зоната</li>
+                  <li>Boat party + 1 активност (ATV/плажен клуб)</li>
+                </ul>
+                <div class="hr"></div>
+                <table>
+                  <thead><tr><th>Разход</th><th class="num">BGN</th><th class="num">EUR</th></tr></thead>
+                  <tbody>
+                    <tr><td>Коли до SOF + паркинг (пример: 3 коли)</td><td class="num">900</td><td class="num">460</td></tr>
+                    <tr><td>Полет Ryanair (пример: 180 € × 10)</td><td class="num">3 520</td><td class="num">1 800</td></tr>
+                    <tr><td>Багаж (само ако някой добавя)</td><td class="num">300</td><td class="num">153</td></tr>
+                    <tr><td>Трансфери CFU ↔ Kavos</td><td class="num">500</td><td class="num">256</td></tr>
+                    <tr><td>Настаняване (3 нощи)</td><td class="num">3 000</td><td class="num">1 534</td></tr>
+                    <tr><td>Храна</td><td class="num">2 200</td><td class="num">1 125</td></tr>
+                    <tr><td>Напитки (Kavos, 3 дни — общ фонд)</td><td class="num">4 500</td><td class="num">2 301</td></tr>
+                    <tr><td>Активности (boat party + ATV/плажен клуб)</td><td class="num">2 500</td><td class="num">1 278</td></tr>
+                    <tr><td>Таксита/локален транспорт</td><td class="num">700</td><td class="num">358</td></tr>
+                    <tr><td>Резерв 10%</td><td class="num">1 812</td><td class="num">927</td></tr>
+                    <tr class="total"><td>ОБЩО</td><td class="num">19 932</td><td class="num">10 191</td></tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="opt">
+                <h3>Премиум</h3>
+                <div class="price">
+                  <div class="big">1 660 € / човек</div>
+                  <div class="small">Общо: 16 603 € • ≈ 32 472 лв (вкл. резерв 10%)</div>
+                </div>
+                <ul class="list">
+                  <li>Същият тип полет (Ryanair) — без “премиум”, но повече comfort на място</li>
+                  <li>По-добро настаняване / топ локация</li>
+                  <li>Напитки: VIP маса/бутилки (2 силни вечери)</li>
+                  <li>Активности: частна лодка/яхта + повече входове/екстри</li>
+                </ul>
+                <div class="hr"></div>
+                <table>
+                  <thead><tr><th>Разход</th><th class="num">BGN</th><th class="num">EUR</th></tr></thead>
+                  <tbody>
+                    <tr><td>Коли до SOF + паркинг (пример: 3 коли)</td><td class="num">1 100</td><td class="num">562</td></tr>
+                    <tr><td>Полет Ryanair (пример: 180 € × 10)</td><td class="num">3 520</td><td class="num">1 800</td></tr>
+                    <tr><td>Багаж (няколко 10кг/добавки)</td><td class="num">800</td><td class="num">409</td></tr>
+                    <tr><td>Трансфери CFU ↔ Kavos (по-частно/гъвкаво)</td><td class="num">900</td><td class="num">460</td></tr>
+                    <tr><td>Настаняване (3 нощи)</td><td class="num">6 000</td><td class="num">3 068</td></tr>
+                    <tr><td>Храна</td><td class="num">3 500</td><td class="num">1 789</td></tr>
+                    <tr><td>Напитки (VIP/бутилки)</td><td class="num">6 500</td><td class="num">3 323</td></tr>
+                    <tr><td>Активности (частна лодка/яхта + входове)</td><td class="num">6 000</td><td class="num">3 068</td></tr>
+                    <tr><td>Таксита/локален транспорт</td><td class="num">1 200</td><td class="num">614</td></tr>
+                    <tr><td>Резерв 10%</td><td class="num">2 952</td><td class="num">1 509</td></tr>
+                    <tr class="total"><td>ОБЩО</td><td class="num">32 472</td><td class="num">16 603</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div class="col4">
+            <div class="opt">
+              <h3>Линкове</h3>
+              <div class="links">
+                <a target="_blank" rel="noopener" href="https://www.skyscanner.net/transport/flights/sofi/cfu/">Полет: SOF → CFU</a>
+                <a target="_blank" rel="noopener" href="https://www.booking.com/searchresults.html?ss=Kavos%2C%20Corfu&group_adults=10">Booking: Kavos (10 души)</a>
+                <a target="_blank" rel="noopener" href="https://www.airbnb.com/s/Kavos--Corfu--Greece/homes?adults=10">Airbnb: Kavos (10 души)</a>
+                <a target="_blank" rel="noopener" href="https://www.getyourguide.com/s/?q=Corfu%20boat%20party">Boat party</a>
+                <a target="_blank" rel="noopener" href="https://www.getyourguide.com/s/?q=Corfu%20ATV">ATV</a>
+              </div>
+              <div class="callout">
+                <b>Къде отиват парите в Корфу?</b><br/>
+                Полет + настаняване + напитки/клубове + активности.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TRANSPARENCY / HOW TO COLLECT -->
+    <div class="section grid" id="money">
+      <div class="card">
+        <h2>Как да съберем парите прозрачно (препоръка)</h2>
+        <div class="muted">Най-чистият вариант е: “фиксирано предварително” + “харч на място”.</div>
+
+        <div class="cols">
+          <div class="col8">
+            <table>
+              <thead><tr><th>Категория</th><th>Как се плаща</th><th>Какво включва</th></tr></thead>
+              <tbody>
+                <tr><td><b>Настаняване</b></td><td>Предварително</td><td>3 нощи + възможен депозит/такси.</td></tr>
+                <tr><td><b>Транспортен фонд</b></td><td>Предварително</td><td>Гориво, паркинги, пътни. (При Корфу: + летищен паркинг)</td></tr>
+                <tr><td><b>Полет (Корфу)</b></td><td>Предварително</td><td>Ryanair билетите (всеки или общ касиер).</td></tr>
+                <tr><td><b>Активности</b></td><td>Предварително/по избор</td><td>Boat party/лодка/ATV — по-добре с резервация.</td></tr>
+                <tr><td><b>Храна + напитки</b></td><td>На място (общ фонд или поотделно)</td><td>Най-голямата променлива — тук бюджетите са умишлено “реалистично високи”.</td></tr>
+                <tr><td><b>Резерв 10%</b></td><td>Предварително</td><td>Таксита, входове, непредвидени разходи.</td></tr>
+              </tbody>
+            </table>
+
+            <div class="callout">
+              <b>Практично:</b> съберете предварително <b>~85–90%</b> (фиксираното + резерв),
+              а “на място” да е контролируем фонд за напитки/таксита.
+            </div>
+          </div>
+          <div class="col4">
+            <div class="opt">
+              <h3>Мини-чеклист</h3>
+              <ul class="list">
+                <li>1 касиер + споделена таблица</li>
+                <li>Ясно правило за “общ фонд за напитки” (дневен лимит или твърда сума)</li>
+                <li>Резервът се ползва само при нужда</li>
+                <li>Всичко “VIP/екстри” — само ако всички са “за”</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="foot">
+          Брошурата е направена да е “презентируема” пред група: ясни варианти, видими разходи и линкове за проверка.
+        </div>
+      </div>
+    </div>
+
+  </div>
 </body>
 </html>
